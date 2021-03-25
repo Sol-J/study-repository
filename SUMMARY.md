@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Intelligent Data Semantics Lab](README.md)
+* [Natural Language Processing](README.md)
 
 ## Natural language processing through the ages
 

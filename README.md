@@ -1,8 +1,8 @@
 ---
-description: Welcome to Intelligent Data Semantics Lab!
+description: This space focus on natural language processing methods.
 ---
 
-# Intelligent Data Semantics Lab
+# Natural Language Processing
 
 
 
