@@ -18,3 +18,12 @@
 
 * [Untitled](attention-mechanism/untitled.md)
 
+## Introduction to n-gram language model
+
+* [N-gram language model](introduction-to-n-gram-language-model/n-gram-language-model.md)
+* [What is N-gram used for?](introduction-to-n-gram-language-model/what-is-n-gram-used-for.md)
+
+## Introduction to topic modeling
+
+* [Untitled](introduction-to-topic-modeling/untitled.md)
+
