@@ -21,7 +21,8 @@
 ## Introduction to n-gram language model
 
 * [N-gram language model](introduction-to-n-gram-language-model/n-gram-language-model.md)
-* [What is N-gram used for?](introduction-to-n-gram-language-model/what-is-n-gram-used-for.md)
+* [What is N-gram used for? \(1\)](introduction-to-n-gram-language-model/what-is-n-gram-used-for.md)
+* [What is N-gram used for? \(2\)](introduction-to-n-gram-language-model/what-is-n-gram-used-for-2.md)
 
 ## Introduction to topic modeling
 
