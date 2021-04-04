@@ -1,5 +1,5 @@
 ---
-description: 'Ref: NLP for Supervised Learning - A Brief Survey (Eugene Yan)'
+description: 'Reference: NLP for Supervised Learning - A Brief Survey (Eugene Yan)'
 ---
 
 # Intro
