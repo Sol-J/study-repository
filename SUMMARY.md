@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Natural Language Processing](README.md)
+* [The Natural Language Processing Space](README.md)
 
 ## Natural language processing through the ages
 
