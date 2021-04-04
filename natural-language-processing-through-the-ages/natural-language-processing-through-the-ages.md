@@ -1,7 +1,5 @@
 ---
-description: >-
-  'NLP for Supervised Learning - A Brief Survey (Eugene Yan)'와 '자연어처리의응용(신효필
-  교수님)' 강의 내용을 참고하여 작성하였다.
+description: 'Ref: NLP for Supervised Learning - A Brief Survey (Eugene Yan)'
 ---
 
 # Intro
