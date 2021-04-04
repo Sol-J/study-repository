@@ -2,7 +2,7 @@
 description: by Sol
 ---
 
-# The NLP Space
+# The Natural Language Processing Space
 
 This space focus on natural language processing methods.
 
