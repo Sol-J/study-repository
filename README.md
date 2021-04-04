@@ -6,5 +6,7 @@ description: This space focus on natural language processing methods.
 
 
 
-![](.gitbook/assets/home1.jpg)
+![](.gitbook/assets/nlp.jpeg)
+
+
 
