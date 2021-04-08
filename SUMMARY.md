@@ -26,5 +26,7 @@
 
 ## Introduction to topic modeling
 
-* [Untitled](introduction-to-topic-modeling/untitled.md)
+* [Topic Modeling](introduction-to-topic-modeling/untitled.md)
+* [Latent Dirichlet Allocation](introduction-to-topic-modeling/latent-dirichlet-allocation.md)
+* [Analysing Product Review Using Topic Modeling](introduction-to-topic-modeling/analysing-product-review-using-topic-modeling.md)
 
