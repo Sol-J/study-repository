@@ -16,7 +16,7 @@ description: 'Reference: NLP for Supervised Learning - A Brief Survey (Eugene Ya
 
    • Attention:  Transformer \(2017\)
 
-   • Pre-training:  ULMFiT \(2017\), GPT \(2017\)
+   • Pre-training:  ULMFiT \(2017\), OpenAI GPT \(2017\)
 
    • Combining the above:  BERT \(2018\)
 
