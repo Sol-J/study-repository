@@ -2,7 +2,7 @@
 description: N-gram을 이용한 문서요약
 ---
 
-# What is N-gram used for? \(1\)
+# Text Summarization Using N-gram
 
 미국 제9대 대통령인 [윌리엄 헨리 해리슨 취임연설문](http://pythonscraping.com/files/inaugurationSpeech.txt)을 사용하여, 다음과 같이 N-gram을 생성하고 정렬하는 코드를 만들 수 있다.
 

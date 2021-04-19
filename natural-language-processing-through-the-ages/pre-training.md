@@ -24,7 +24,19 @@ description: 'ULMFiT (2017), GPT (2017)'
 * GPT2 - Language Models are Unsupervised Multitask Learners
 * GPT3 - Language Models are Few-Shot Learners
 
+![ Improving Language Understanding by Generative Pre-Training \(2018\)](../.gitbook/assets/gpt-architecture.png)
+
+ GPT1은 매우 큰 NLP 데이터를 활용해 비지도 학습으로 pre-training 한 후 학습된 가중치를 활용해 우리가 풀고자 하는 문제에 fine-tuning하는 방법론의 모델이다. 
+
+ GPT2는 GPT1의 성능을 향상시킨 모델로 기존의 GPT1은 12개의 레이어로 총 117만 개의 파라미터를 가지고 pre-training에 사용했다면, GPT2는 48개의 레이어로 구성되어 총 1,542만개의 파라미터를 가지고 있다. 또한 GPT1과 달리 다양한 도메인의 텍스트를 활용해 pre-training 하기 때문에 모델이 좀 더 다양한 문맥과 도메인의 글을 이해할 수 있게 되었다. 
+
+ GPT3는 2020년 6월에 공개된 가장 큰 언어 모델로, 1,750억 개의 파라미터를 가지고 있다. 단일 문장 뿐만 아니라 대화의 문맥을 파악하고 창의적인 답변을 내놓는 수준에 도달하였으며, GPT3에 의해 생성된 텍스트는 사람이 작성한 텍스트와 구별하기 어려울 정도로 높은 퀄리티를 보인다. 
+
+{% file src="../.gitbook/assets/language\_understanding\_paper.pdf" %}
+
+{% file src="../.gitbook/assets/language\_models\_are\_unsupervised\_multitask\_learners.pdf" %}
+
+{% file src="../.gitbook/assets/language-models-are-few-shot-learners.pdf" %}
 
 
-\(작성중\)
 

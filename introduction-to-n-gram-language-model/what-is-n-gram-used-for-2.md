@@ -2,7 +2,7 @@
 description: N-gram을 이용한 문장생성
 ---
 
-# What is N-gram used for? \(2\)
+# Text Generation Using N-gram
 
 2-gram을 사용해 기존 노래 가사를 모방하는 **마르코프 체인\(Markov Chain\)**을 만들어서 새로운 문장을 생성해볼 수 있다. 
 
