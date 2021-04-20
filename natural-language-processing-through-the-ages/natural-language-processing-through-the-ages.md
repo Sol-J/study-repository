@@ -20,7 +20,7 @@ description: 'Reference: NLP for Supervised Learning - A Brief Survey (Eugene Ya
 
    • Combining the above:  BERT \(2018\)
 
-   • Improving BERT:  DistilBERT, ALBERT, RoBERTa, XLNet, Big Bird, Multilingual embeddings
+   • Improving BERT:  DistilBERT, ALBERT, RoBERTa, XLNet, Big Bird
 
    • Everything is text-to-text:  T5 \(2019\)
 

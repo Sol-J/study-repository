@@ -18,9 +18,9 @@ description: BERT (2018)
 
 ![](../.gitbook/assets/bert_fine_tuning.png)
 
-{% file src="../.gitbook/assets/bert-pre-training-of-deep-bidirectional-transformers-for-language-understanding.pdf" %}
+ 이러한 BERT는 기존의 NLP 태스크들에서 SOTA \(State-of-the-Art\)를 달성했고, 비교적 간단한 fine-tuning을 통해 다양한 NLP 문제들에 빠르게 적용할 수 있다는 장점이 있다. 그래서 이후의 연구들은 대부분 BERT 또는 BERT에 사용된 Transfomer의 응용이다.   
 
 {% embed url="https://colab.research.google.com/drive/17f7toMKAq8rcasckOVINYWB3zmZkfKAr?usp=sharing" caption="BERT를 활용한 미세조정 학습 예제 코드" %}
 
-
+{% file src="../.gitbook/assets/bert-pre-training-of-deep-bidirectional-transformers-for-language-understanding.pdf" %}
 
