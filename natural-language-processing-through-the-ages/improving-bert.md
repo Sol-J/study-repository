@@ -22,7 +22,7 @@ description: 'DistilBERT, ALBERT, RoBERTa, XLNet (2019); Big Bird (2020)'
 
 {% file src="../.gitbook/assets/xlnet-generalized-autoregressive-pretraining-for-language-understanding.pdf" %}
 
- BERT 모델은 input sequence 길이가 512 tokens으로 제한되어 있다. 2020년 8월 Google Research 팀에서는 이보다 8배 긴 sequence input \(4,096 tokens\)을 다룰 수 있는 **BigBird**를 공개하였다. BigBird는 Transformer 아키턱체를 기반으로 한 모델로, multi-head self-attention과 feed-forward network로 구성된 layer를 여러겹 쌓아서 만든 구조이다. 다만 self-attention 부분에서 full-attention이 아닌 sparse attention으로 연산한다는 점에 차이가 있다. full-attention은 배열 간 모든 조합을 연산하기 때문에 quadratic dependency가 발생할 수 있다. 이러한 연산을 좀 더 linear하게 효율적으로 계산할 수 있도록 BigBird에서는 아래의 세가지\(random, window, global\) 구조가 합쳐진 새로운 attention 방법을 제안하였다. 실제 성능 검증에서도 BigBird의 sparse한 attention이 full attention의 특성을 잃지 않고, long sequence의 입력을 처리하는 데에 있어서 우수한 성능을 보여주었다고 한다. 
+ BERT 모델은 input sequence 길이가 512 tokens으로 제한되어 있다. 2020년 8월 Google Research 팀에서는 이보다 8배 긴 sequence input \(4,096 tokens\)을 다룰 수 있는 **BigBird**를 공개하였다. BigBird는 Transformer 아키텍처를 기반으로 한 모델로, multi-head self-attention과 feed-forward network로 구성된 layer를 여러겹 쌓아서 만든 구조이다. 다만 self-attention 부분에서 full-attention이 아닌 sparse attention으로 연산한다는 점에 차이가 있다. full-attention은 배열 간 모든 조합을 연산하기 때문에 quadratic dependency가 발생할 수 있다. 이러한 연산을 좀 더 linear하게 효율적으로 계산할 수 있도록 BigBird에서는 아래의 세가지\(random, window, global\) 구조가 합쳐진 새로운 attention 방법을 제안하였다. 실제 성능 검증에서도 BigBird의 sparse한 attention이 full attention의 특성을 잃지 않고, long sequence의 입력을 처리하는 데에 있어서 우수한 성능을 보여주었다고 한다.   
 
 * Random attention: 각각의 query가 랜덤한 r개의 key에 attention 한다.
 * Window attention: 인접한 token\(or word\)에 영향을 받는다. locality를 강조하여 양 옆으로 일정하게 떨어진 token에 attention 한다. 
