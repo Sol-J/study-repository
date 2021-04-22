@@ -16,7 +16,7 @@
 
 ## Attention Mechanism
 
-* [Intro](attention-mechanism/intro.md)
+* [Overview](attention-mechanism/intro.md)
 * [Attention Function](attention-mechanism/untitled.md)
 * [Self-Attention](attention-mechanism/self-attention.md)
 * [Scaled dot product Attention](attention-mechanism/scaled-dot-product-attention.md)
