@@ -33,3 +33,10 @@
 * [Latent Dirichlet Allocation](introduction-to-topic-modeling/latent-dirichlet-allocation.md)
 * [Analysing Product Review Using Topic Modeling](introduction-to-topic-modeling/analysing-product-review-using-topic-modeling.md)
 
+## Question Answering with Haystack
+
+* [Intro](question-answering-with-haystack/intro.md)
+* [Open Domain Question Answering \(ODQA\)](question-answering-with-haystack/open-domain-question-answering-odqa.md)
+* [Overview of the QA frameworks](question-answering-with-haystack/overview-of-the-qa-frameworks.md)
+* [Build a QA pipeline using Haystack](question-answering-with-haystack/build-a-qa-pipeline-using-haystack.md)
+
