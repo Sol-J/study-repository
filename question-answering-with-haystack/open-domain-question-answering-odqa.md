@@ -23,7 +23,5 @@ Open-domain Question Answering \(ODQA\) is a type of language tasks, asking a mo
 * Stanford Question Answering Dataset \(SQuAD\) [Link](https://rajpurkar.github.io/SQuAD-explorer/) 
 * The Korean Question Answering Dataset \(KorQuAD\) [Link](https://korquad.github.io/)
 
-![Source: https://towardsdatascience.com/building-a-question-answering-system-part-1-9388aadff507](../.gitbook/assets/2021-04-27-11.26.27.png)
-
-
+![Source: https://towardsdatascience.com/building-a-question-answering-system-part-1-9388aadff507](../.gitbook/assets/2021-04-27-11.26.31.png)
 

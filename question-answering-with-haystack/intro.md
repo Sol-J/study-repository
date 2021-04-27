@@ -13,3 +13,7 @@
 > 2. Overview of the QA frameworks
 > 3. Example of QA pipeline
 
+{% embed url="https://colab.research.google.com/drive/1Z8DTgXFPL05JtlHhvfE5RyYJSSD-0\_SC?usp=sharing" %}
+
+
+
