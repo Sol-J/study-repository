@@ -40,3 +40,8 @@
 * [Overview of the QA frameworks](question-answering-with-haystack/overview-of-the-qa-frameworks.md)
 * [Build a QA pipeline using Haystack](question-answering-with-haystack/build-a-qa-pipeline-using-haystack.md)
 
+## Build Reading Comprehension Dataset for Extractive Question Answering
+
+* [Background](build-reading-comprehension-dataset-for-extractive-question-answering/background.md)
+* [Untitled](build-reading-comprehension-dataset-for-extractive-question-answering/untitled.md)
+
