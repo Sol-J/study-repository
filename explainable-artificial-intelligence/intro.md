@@ -26,5 +26,6 @@ description: Fairness, Accountability, and Transparency of Algorithms
 *   High Interpretable Model
 
     Logistic Regression의 경우 각 features(x1, x2, x3...)가 y에 어느정도 기여했는지 회귀 계수 을 통해 확인할 수 있기 때문에 예측값에 대한 해석이 가능하다. 또한 Decision Tree는 모델 내부 구조를 보면 어떤 feature가 어떤 값을 가졌을 때 특정 범주로 분류되었는지 확인할 수 있기 때문에 예측값에 대한 해석이 가능하다.
+*   High Accurate Model&#x20;
 
-&#x20;
+    Neural Networks를 활용한 모델은 예측 결과의 정확도는 높을 수 있지만 모델이 어떤 과정을 통해 도출한 결과인지 파악하기 어렵다. 모델의 내부를 들여다보아도 수 많은 파라미터로 구성되어 있어 사람이 이해하는 데에 어려움이 있다. &#x20;
