@@ -8,7 +8,7 @@ description: Fairness, Accountability, and Transparency of Algorithms
 
 * XAI는 인공지능 모델이 특정 결론을 내리기까지 어떤 근거로 의사결정을 내렸는지를 알 수 있게 '설명 가능성'을 추가하는 것이다.&#x20;
 
-#### XAI 등장 배
+#### XAI 등장 배경&#x20;
 
 * XAI는 2004년도에 반 렌트(Michel van Lent)와 피셔(William Fisher), 만쿠소(Michael Mancuso) 세 사람이 제시한 용어로, 이들은 인공지능 시스템이 갈수록 복잡해지는 반면에 그것들의 자기 설명 기능에는 발전이 없었다는 것을 지적하였다.&#x20;
 * 인공지능 기술이 계속해서 발전할 수록 기계가 학습하는 feature1)의 양이 사람이 해석 불가능할 만큼 많아지게 된다.&#x20;
@@ -26,4 +26,5 @@ description: Fairness, Accountability, and Transparency of Algorithms
 *   High Interpretable Model
 
     Logistic Regression의 경우 각 features(x1, x2, x3...)가 y에 어느정도 기여했는지 회귀 계수 을 통해 확인할 수 있기 때문에 예측값에 대한 해석이 가능하다. 또한 Decision Tree는 모델 내부 구조를 보면 어떤 feature가 어떤 값을 가졌을 때 특정 범주로 분류되었는지 확인할 수 있기 때문에 예측값에 대한 해석이 가능하다.
-* ㅗㅑㅗ&#x20;
+
+&#x20;
