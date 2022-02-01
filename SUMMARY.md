@@ -36,7 +36,10 @@
 ## Question Answering with Haystack
 
 * [Intro](question-answering-with-haystack/intro.md)
-* [Open Domain Question Answering \(ODQA\)](question-answering-with-haystack/open-domain-question-answering-odqa.md)
+* [Open Domain Question Answering (ODQA)](question-answering-with-haystack/open-domain-question-answering-odqa.md)
 * [Overview of the QA frameworks](question-answering-with-haystack/overview-of-the-qa-frameworks.md)
 * [Build a QA pipeline using Haystack](question-answering-with-haystack/build-a-qa-pipeline-using-haystack.md)
 
+## Explainable Artificial Intelligence
+
+* [Intro](explainable-artificial-intelligence/intro.md)
