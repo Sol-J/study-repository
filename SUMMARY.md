@@ -43,3 +43,9 @@
 ## Explainable Artificial Intelligence
 
 * [Intro](explainable-artificial-intelligence/intro.md)
+* [Permutaion Feature Importance](explainable-artificial-intelligence/permutaion-feature-importance.md)
+* [Partial Dependence Plots](explainable-artificial-intelligence/partial-dependence-plots.md)
+* [Surrogate Analysis](explainable-artificial-intelligence/surrogate-analysis.md)
+* [LIME(Local Interpretable Model-agnostic Explanations)](explainable-artificial-intelligence/lime-local-interpretable-model-agnostic-explanations.md)
+* [SHAP(Shapley Additive exPlanations)](explainable-artificial-intelligence/shap-shapley-additive-explanations.md)
+* [LPR(Layer-wise Relevance Propagation)](explainable-artificial-intelligence/lpr-layer-wise-relevance-propagation.md)
