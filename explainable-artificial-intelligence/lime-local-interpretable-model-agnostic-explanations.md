@@ -32,3 +32,7 @@
 * 데이터의 분포가 국소(local)적으로도 매우 비선형적이면 local에서 선형성을 가정하는 LIME은 설명력에 한계를 갖게 된다.&#x20;
 * The proximity measure와 model의 complexity를 설정하는 데에 명확한 기준이 없기 때문에 모호하다.&#x20;
 * LIME은 데이터 하나에 대한 설명이기 때문에 모델 전체에 대한 일관성을 보장하지 못한다.
+
+{% embed url="https://colab.research.google.com/drive/1TOWaDpISvsD4akvK57xbcUzedOKp2wJE?usp=sharing" %}
+LIME 예제
+{% endembed %}
