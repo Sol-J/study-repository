@@ -29,3 +29,12 @@ description: Fairness, Accountability, and Transparency of Algorithms
 *   **High Accurate Model**&#x20;
 
     Neural Networks를 활용한 모델은 예측 결과의 정확도는 높을 수 있지만 모델이 어떤 과정을 통해 도출한 결과인지 파악하기 어렵다. 모델의 내부를 들여다보아도 수 많은 파라미터로 구성되어 있어 사람이 이해하는 데에 어려움이 있다. &#x20;
+
+#### XAI 기법들
+
+1. Permutation Feature Importance
+2. Partial Dependence Plots
+3. Surrogate Analysis
+4. LIME(Local Interpretable Model-agnostic Explanations
+5. SHAP(Shapley Additive exPlanations)
+6. LPR(Layer-wise Relevance Propagation)
