@@ -4,7 +4,7 @@
 
 분석해야 할 모델을 f라고 할 때, f를 흉내내는 모델 g1과 g2를 만든다. f의 예측 결과와 가장 유사하게 학습된 모델(g1, g2 중 하나)이 f를 대신 설명할 대리 분석 모델이 된다. 모델 g를 결정하는 조건은 (1) 모델 f보다 학습하기 쉽고, (2) 설명 가능하며, (3) 모델 f를 유사하게 흉내 낼 수 있으면 된다.
 
-![](<../.gitbook/assets/스크린샷 2022-02-11 오전 1.42.36.png>)
+![](../.gitbook/assets/surrogate-analysis.png)
 
 #### 대리 분석의 장점
 
@@ -17,7 +17,7 @@
 * 글로벌 대리 분석(Global Surrogate Analysis) : 학습 데이터(전체 또는 샘플링)를 사용해서 블랙박스 모델을 따라하는 유사한 모델을 구축한다.&#x20;
 * 로컬 대리 분석(Local Surrogate Analysis) : 모델이 학습 데이터 하나(individual data instance)를 해석하는 과정을 분석한다.
 
-![XAI Scope: Where is the XAI method focusing on?](<../.gitbook/assets/스크린샷 2022-02-11 오전 1.42.45.png>)
+![XAI Scope: Where is the XAI method focusing on?](../.gitbook/assets/surrogate-local-and-global.png)
 
 > Das, A., & Rad, P. (2020). Opportunities and challenges in explainable artificial intelligence (xai): A survey. arXiv preprint arXiv:2006.11371.
 

@@ -19,7 +19,7 @@ description: Fairness, Accountability, and Transparency of Algorithms
 
 * 모델의 interpretability가 높을 수록 모델 구조가 단순하기 때문에 accuracy는 낮을 수 밖에 없게 된다. 즉 accuracy와 interpretability 간의 trade-off가 존재한다. 이때 높은 accuracy가 요구되는 경우, interpretability가 낮은 모델을 사용하게 되고 모델 자체만으로는 예측 결과에 대한 해석이 어렵기 때문에 XAI가 필요하게 된다.
 
-![Figure 1. The trade-off between interpretability and accuracy of some relevant ML models.](<../.gitbook/assets/스크린샷 2022-02-01 오후 3.43.59.png>)
+![Figure 1. The trade-off between interpretability and accuracy of some relevant ML models.](../.gitbook/assets/interpretability-accuracy.png)
 
 > Morocho-Cayamcela, M. E., Lee, H., & Lim, W. (2019). Machine learning for 5G/B5G mobile and wireless communications: Potential, limitations, and future directions. _IEEE Access_, 7, 137184-137206.
 
