@@ -18,7 +18,7 @@ Seoul National University
 
 - **주피터 노트북 환경**
 
-    - **matplotlib.rcParams[] 사용[https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#%EC%9C%88%EB%8F%84%EC%9A%B0-%ED%99%98%EA%B2%BD]**
+    - **[matplotlib.rcParams[] 사용](https://github.com/Sol-J/study-repository/blob/master/korean-fonts-setup.md#matplotlib.rcParams-사용)**
         - 윈도우 환경
             - 시스템에 설치되어 있는 폰트 확인하기
             - 한글 폰트 설치하기
