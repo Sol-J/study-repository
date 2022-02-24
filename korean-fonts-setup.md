@@ -295,6 +295,8 @@ pyplot.plot(x, x)
 pyplot.show()
 ```
 
+![png](img/font_4.png)
+
 ## 주피터 노트북 설정 변경
 
 주피터 노트북 matplotlib 설정 파일을 찾아서 폰트 옵션을 변경한다. 
@@ -306,10 +308,12 @@ pyplot.show()
 matplotlib.matplotlib_fname()
 ```
 
-파일이 열리면, 다음 이미지와 같이 font.family 옵션을 찾아서 빨간색 표시된 부분을 다음과 같이 수정하고 저장한다. 이때 Malgun Gothic은 윈도우에서 제공하는 한글 글꼴 중 가장 기본적인 것이다. 띄어쓰기 및 대문자에 주의한다. 
+파일이 열리면 font.family 옵션을 찾아서 이미지의 빨간색 표시된 부분을 다음과 같이 수정하고 저장한다. 이때 Malgun Gothic은 윈도우에서 제공하는 한글 글꼴 중 가장 기본적인 것이다. 띄어쓰기 및 대문자에 주의한다. 
 
 수정전: #font.family : sans-serif  
 수정후: #font.family : Malgun Gothic
+
+![png](img/font_6.png)
 
 수정을 완료하였다면 주피터 노트북을 완전히 껐다가 다시 실행한다. 
 
@@ -322,6 +326,7 @@ pyplot.plot(x, x)
 pyplot.show()
 ```
 
+![png](img/font_3.png)
 
 ### 맥(masOS) 환경
 
@@ -330,10 +335,12 @@ pyplot.show()
 matplotlib.matplotlib_fname()
 ```
 
-파일이 열리면, 다음 이미지와 같이 font.family 옵션을 찾아서 빨간색 표시된 부분을 다음과 같이 수정하고 저장한다. 이때 AppleGothic은 맥에서 제공하는 한글 글꼴 중 가장 기본적인 것이다. 띄어쓰기 및 대문자에 주의한다. 
+파일이 열리면 font.family 옵션을 찾아서 이미지의 빨간색 표시된 부분을 다음과 같이 수정하고 저장한다. 이때 AppleGothic은 맥에서 제공하는 한글 글꼴 중 가장 기본적인 것이다. 띄어쓰기 및 대문자에 주의한다. 
 
 수정전: #font.family : sans-serif  
 수정후: #font.family : AppleGothic
+
+![png](img/font_6.png)
 
 수정을 완료하였다면 주피터 노트북을 완전히 껐다가 다시 실행한다. 
 
@@ -345,6 +352,9 @@ x = 1, 2, 3
 pyplot.plot(x, x)
 pyplot.show()
 ```
+
+![png](img/font_4.png)
+
 
 # Google Colaboratory 환경
 
@@ -400,7 +410,6 @@ x = 1, 2, 3
 pyplot.plot(x, x)
 pyplot.show()
 ```
-
 
 ![png](img/font_5.png)
 
