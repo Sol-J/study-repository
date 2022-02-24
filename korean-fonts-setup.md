@@ -12,7 +12,7 @@ Seoul National University
 
 - - -
 
-<div align='right'><font size='-1'>[credit: 김도훈(2019학번)]</font></div>
+<div align='right'><font size='-1'>[credit: 진솔, 김도훈]</font></div>
 
 <h3>Table of Contents<span class="tocSkip"></span></h3>
 <div class="toc"><ul class="toc-item"><li><span><a href="#윈도우-환경" data-toc-modified-id="윈도우-환경-1">윈도우 환경</a></span><ul class="toc-item"><li><span><a href="#시스템에-설치되어-있는-폰트-확인하기" data-toc-modified-id="시스템에-설치되어-있는-폰트-확인하기-1.1">시스템에 설치되어 있는 폰트 확인하기</a></span></li><li><span><a href="#한글-폰트-설치하기" data-toc-modified-id="한글-폰트-설치하기-1.2">한글 폰트 설치하기</a></span></li></ul></li><li><span><a href="#맥(masOS)-환경" data-toc-modified-id="맥(masOS)-환경-2">맥(masOS) 환경</a></span><ul class="toc-item"><li><span><a href="#시스템에-설치되어-있는-폰트-확인하기" data-toc-modified-id="시스템에-설치되어-있는-폰트-확인하기-2.1">시스템에 설치되어 있는 폰트 확인하기</a></span></li><li><span><a href="#한글-폰트-설치하기" data-toc-modified-id="한글-폰트-설치하기-2.2">한글 폰트 설치하기</a></span></li></ul></li><li><span><a href="#Google-Colaboratory-환경" data-toc-modified-id="Google-Colaboratory-환경-3">Google Colaboratory 환경</a></span><ul class="toc-item"><li><span><a href="#한글-폰트-설치하기" data-toc-modified-id="한글-폰트-설치하기-3.1">한글 폰트 설치하기</a></span></li></ul></li><li><span><a href="#참고" data-toc-modified-id="참고-4">참고</a></span></li></ul></div>
@@ -39,10 +39,11 @@ import platform
 # matplotlib 도표를 출력 영역에 표시할 것을 지시하는 매직 명령어다.
 %matplotlib inline
 ```
+# 주피터 노트북 환경
 
-# 윈도우 환경
+## 윈도우 환경
 
-## 시스템에 설치되어 있는 폰트 확인하기
+### 시스템에 설치되어 있는 폰트 확인하기
 
 다음 코드는 내 컴퓨터에 등록된 폰트들을 출력한다. 이 중 한글을 지원하는 폰트를 선택하면 된다.
 
@@ -72,7 +73,7 @@ pyplot.show()
 ![png](img/font_1.png)
 
 
-## 한글 폰트 설치하기
+### 한글 폰트 설치하기
 
 한글 폰트가 설치되어 있지 않으면 아래의 링크에 접속하여 한글 폰트를 내려 받을 수 있다.
 - https://brunch.co.kr/@jade/203
@@ -136,9 +137,9 @@ pyplot.show()
 
 만약 폰트가 정상적으로 설치되었음에도 한글이 출력되지 않고 ㅁㅁ로 나오면 커널을 재시작하고 코드를 실행하면 해결이 된다.
 
-# 맥(masOS) 환경
+## 맥(masOS) 환경
 
-## 시스템에 설치되어 있는 폰트 확인하기
+### 시스템에 설치되어 있는 폰트 확인하기
 
 다음 코드는 내 컴퓨터에 등록된 폰트들을 출력한다. 이 중 한글을 지원하는 폰트를 선택하면 된다.
 
@@ -173,7 +174,7 @@ pyplot.show()
 ![png](img/font_3.png)
 
 
-## 한글 폰트 설치하기
+### 한글 폰트 설치하기
 
 한글 폰트가 설치되어 있지 않으면 아래의 링크에 접속하여 한글 폰트를 내려 받을 수 있다.
 
