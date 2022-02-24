@@ -16,6 +16,7 @@ Seoul National University
 
 <h3>Table of Contents<span class="tocSkip"></span></h3>
 
+- - -
 - **주피터 노트북 환경**
 
     - **matplotlib.rcParams[] 사용**
@@ -38,6 +39,7 @@ Seoul National University
 
 - **참고**
 
+- - -
 
 ```python
 # 버전 확인하기
