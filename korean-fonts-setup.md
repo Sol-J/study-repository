@@ -287,7 +287,7 @@ fontprop = font_manager.FontProperties(fname=path, size=13)
 ```
 
 ```python
-# 앞서 설정한 폰트를 원하는 항목에 적용시킨다.
+# 앞서 설정한 폰트 옵션을 원하는 항목에 적용시켜서 출력한다. 
 pyplot.title('한글 제목', fontproperties=fontprop)
 
 x = 1, 2, 3
@@ -295,7 +295,56 @@ pyplot.plot(x, x)
 pyplot.show()
 ```
 
+## 주피터 노트북 설정 변경
 
+주피터 노트북 matplotlib 설정 파일을 찾아서 폰트 옵션을 변경한다. 
+
+### 윈도우 환경
+
+```python
+# 설정 파일 위치를 확인한다. 출력된 경로로 폴더를 이동하여 'matplotlibrc' 파일을 메모장이나 워드패드로 연다.  
+matplotlib.matplotlib_fname()
+```
+
+파일이 열리면, 다음 이미지와 같이 font.family 옵션을 찾아서 빨간색 표시된 부분을 다음과 같이 수정하고 저장한다. 이때 Malgun Gothic은 윈도우에서 제공하는 한글 글꼴 중 가장 기본적인 것이다. 띄어쓰기 및 대문자에 주의한다. 
+
+수정전: #font.family : sans-serif  
+수정후: #font.family : Malgun Gothic
+
+수정을 완료하였다면 주피터 노트북을 완전히 껐다가 다시 실행한다. 
+
+```python
+# 별도의 추가적인 설정 없이 바로 한글 폰트가 잘 나오는 것을 확인할 수 있다.
+pyplot.title('한글 제목')
+
+x = 1, 2, 3
+pyplot.plot(x, x)
+pyplot.show()
+```
+
+
+### 맥(masOS) 환경
+
+```python
+# 설정 파일 위치를 확인한다. 출력된 경로로 폴더를 이동하여 'matplotlibrc' 파일을 메모장이나 워드패드로 연다.  
+matplotlib.matplotlib_fname()
+```
+
+파일이 열리면, 다음 이미지와 같이 font.family 옵션을 찾아서 빨간색 표시된 부분을 다음과 같이 수정하고 저장한다. 이때 AppleGothic은 맥에서 제공하는 한글 글꼴 중 가장 기본적인 것이다. 띄어쓰기 및 대문자에 주의한다. 
+
+수정전: #font.family : sans-serif  
+수정후: #font.family : AppleGothic
+
+수정을 완료하였다면 주피터 노트북을 완전히 껐다가 다시 실행한다. 
+
+```python
+# 별도의 추가적인 설정 없이 바로 한글 폰트가 잘 나오는 것을 확인할 수 있다.
+pyplot.title('한글 제목')
+
+x = 1, 2, 3
+pyplot.plot(x, x)
+pyplot.show()
+```
 
 # Google Colaboratory 환경
 
