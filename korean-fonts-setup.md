@@ -14,8 +14,36 @@ Seoul National University
 
 <div align='right'><font size='-1'>[credit: 진솔, 김도훈]</font></div>
 
+
+2) FontProperties 사용 - 폰트가 필요한 항목마다 개별적으로 적용된다. 
+3) 주피터 노트북 설정 변경 - 설정 자체를 변경하기 때문에 1)이나 2)와 같이 별도로 폰트를 지정하지 않아도 된다. 
+
 <h3>Table of Contents<span class="tocSkip"></span></h3>
-<div class="toc"><ul class="toc-item"><li><span><a href="#윈도우-환경" data-toc-modified-id="윈도우-환경-1">윈도우 환경</a></span><ul class="toc-item"><li><span><a href="#시스템에-설치되어-있는-폰트-확인하기" data-toc-modified-id="시스템에-설치되어-있는-폰트-확인하기-1.1">시스템에 설치되어 있는 폰트 확인하기</a></span></li><li><span><a href="#한글-폰트-설치하기" data-toc-modified-id="한글-폰트-설치하기-1.2">한글 폰트 설치하기</a></span></li></ul></li><li><span><a href="#맥(masOS)-환경" data-toc-modified-id="맥(masOS)-환경-2">맥(masOS) 환경</a></span><ul class="toc-item"><li><span><a href="#시스템에-설치되어-있는-폰트-확인하기" data-toc-modified-id="시스템에-설치되어-있는-폰트-확인하기-2.1">시스템에 설치되어 있는 폰트 확인하기</a></span></li><li><span><a href="#한글-폰트-설치하기" data-toc-modified-id="한글-폰트-설치하기-2.2">한글 폰트 설치하기</a></span></li></ul></li><li><span><a href="#Google-Colaboratory-환경" data-toc-modified-id="Google-Colaboratory-환경-3">Google Colaboratory 환경</a></span><ul class="toc-item"><li><span><a href="#한글-폰트-설치하기" data-toc-modified-id="한글-폰트-설치하기-3.1">한글 폰트 설치하기</a></span></li></ul></li><li><span><a href="#참고" data-toc-modified-id="참고-4">참고</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span>
+    
+
+
+<h3>Table of Contents<span class="tocSkip"></span></h3>
+<div class="toc"><ul class="toc-item"><li><span>
+    
+<a href="#주피터-노트북-환경" data-toc-modified-id="주피터-노트북-환경-1">주피터-노트북-환경</a></span><ul class="toc-item"><li><span>
+
+<a href="#matplotlib.rcParams[]-사용" data-toc-modified-id="matplotlib.rcParams[]-사용-1.1">matplotlib.rcParams[] 사용</a></span></li><li><span>   
+    
+<a href="#윈도우-환경" data-toc-modified-id="윈도우-환경-1.1.1">윈도우 환경</a></span></li><li><span>  
+<a href="#시스템에-설치되어-있는-폰트-확인하기" data-toc-modified-id="시스템에-설치되어-있는-폰트-확인하기-1.1.1.1">시스템에 설치되어 있는 폰트 확인하기</a></span></li><li><span>
+<a href="#한글-폰트-설치하기" data-toc-modified-id="한글-폰트-설치하기-1.1.1.2">한글 폰트 설치하기</a></span></li></ul></li><li><span>
+
+<a href="#맥(macOS)-환경" data-toc-modified-id="맥(macOS)-환경-1.1.2">맥(macOS) 환경</a></span><ul class="toc-item"><li><span>
+<a href="#시스템에-설치되어-있는-폰트-확인하기" data-toc-modified-id="시스템에-설치되어-있는-폰트-확인하기-1.1.2.1">시스템에 설치되어 있는 폰트 확인하기</a></span></li><li><span>
+<a href="#한글-폰트-설치하기" data-toc-modified-id="한글-폰트-설치하기-1.1.2.1">한글 폰트 설치하기</a></span></li></ul></li><li><span>
+    
+<a href="#Google-Colaboratory-환경" data-toc-modified-id="Google-Colaboratory-환경-2">Google Colaboratory 환경</a></span><ul class="toc-item"><li><span>
+    
+<a href="#한글-폰트-설치하기" data-toc-modified-id="한글-폰트-설치하기-2.1">한글 폰트 설치하기</a></span></li></ul></li><li><span>
+    
+<a href="#참고" data-toc-modified-id="참고-4">참고</a></span></li></ul></div>
+
 
 
 ```python
@@ -25,7 +53,7 @@ print('matplotlib 버전:', matplotlib.__version__)
 print('캐시 경로:', matplotlib.get_cachedir())
 print('설정 경로:', matplotlib.get_configdir())
 ```
-    matplotlib 버전: 3.1.2
+    matplotlib 버전: 3.3.2
     캐시 경로: /Users/jinsoopark/.matplotlib
     설정 경로: /Users/jinsoopark/.matplotlib
 
@@ -144,7 +172,7 @@ pyplot.show()
 
 만약 폰트가 정상적으로 설치되었음에도 한글이 출력되지 않고 ㅁㅁ로 나오면 커널을 재시작하고 코드를 실행하면 해결이 된다.
 
-### 맥(masOS) 환경
+### 맥(macOS) 환경
 
 #### 시스템에 설치되어 있는 폰트 확인하기
 
@@ -328,7 +356,7 @@ pyplot.show()
 
 ![png](img/font_3.png)
 
-### 맥(masOS) 환경
+### 맥(macOS) 환경
 
 ```python
 # 설정 파일 위치를 확인한다. 출력된 경로로 폴더를 이동하여 'matplotlibrc' 파일을 메모장이나 워드패드로 연다.  
