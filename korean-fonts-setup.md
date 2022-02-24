@@ -16,27 +16,27 @@ Seoul National University
 
 <h3>Table of Contents<span class="tocSkip"></span></h3>
 
-- **주피터 노트북 환경**
+- **[주피터 노트북 환경](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#주피터-노트북-환경)**
 
-    - **[matplotlib.rcParams[] 사용](https://github.com/Sol-J/study-repository/blob/master/korean-fonts-setup.md#matplotlibrcParams-사용)**
-        - 윈도우 환경
-            - 시스템에 설치되어 있는 폰트 확인하기
-            - 한글 폰트 설치하기
-        - 맥(macOS) 환경
-            - 시스템에 설치되어 있는 폰트 확인하기
-            - 한글 폰트 설치하기
+    - **[matplotlib.rcParams[] 사용](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#matplotlibrcParams-사용)**
+        - [윈도우 환경](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#윈도우-환경)
+            - [시스템에 설치되어 있는 폰트 확인하기](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#시스템에-설치되어-있는-폰트-확인하기)
+            - [한글 폰트 설치하기](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#한글-폰트-설치하기)
+        - [맥(macOS) 환경](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#맥macos-환경)
+            - [시스템에 설치되어 있는 폰트 확인하기](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#시스템에-설치되어-있는-폰트-확인하기-1)
+            - [한글 폰트 설치하기](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#한글-폰트-설치하기-1)
 
-    - **FontProperties 사용 (윈도우 및 맥 공통)**
-        - 시스템에 설치되어 있는 폰트 확인하기
+    - **[FontProperties 사용 (윈도우 및 맥 공통)](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#FontProperties-사용-윈도우-및-맥-공통)**
+        - [시스템에 설치되어 있는 폰트 확인하기](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#시스템에-설치되어-있는-폰트-확인하기-2)
 
-    - **주피터 노트북 설정 변경**
-        - 윈도우 환경
-        - 맥(macOS) 환경
+    - **[주피터 노트북 설정 변경](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#주피터-노트북-설정-변경)**
+        - [윈도우 환경](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#윈도우-환경-1)
+        - [맥(macOS) 환경](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#맥macos-환경-1)
 
-- **Google Colaboratory 환경**
-    - 한글 폰트 설치하기
+- **[Google Colaboratory 환경](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#Google-Colaboratory-환경)**
+    - [한글 폰트 설치하기](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#한글-폰트-설치하기-2)
 
-- **참고**
+- **[참고](https://github.com/jinsooya/lab/blob/master/visualization/korean-fonts-setup.md#참고)**
 
 - - -
 
