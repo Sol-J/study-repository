@@ -19,27 +19,27 @@ Seoul National University
 
 # Table of Contents
 
-## 주피터 노트북 환경
+- 주피터 노트북 환경
 
-### matplotlib.rcParams[] 사용
-    - 윈도우 환경
+    - matplotlib.rcParams[] 사용
+        - 윈도우 환경
+            - 시스템에 설치되어 있는 폰트 확인하기
+            - 한글 폰트 설치하기
+        - 맥(macOS) 환경
+            - 시스템에 설치되어 있는 폰트 확인하기
+            - 한글 폰트 설치하기
+
+    - FontProperties 사용 (윈도우 및 맥 공통)
         - 시스템에 설치되어 있는 폰트 확인하기
-        - 한글 폰트 설치하기
-    - 맥(macOS) 환경
-        - 시스템에 설치되어 있는 폰트 확인하기
-        - 한글 폰트 설치하기
 
-### FontProperties 사용 (윈도우 및 맥 공통)
-    - 시스템에 설치되어 있는 폰트 확인하기
+    - 주피터 노트북 설정 변경
+        - 윈도우 환경
+        - 맥(macOS) 환경
 
-### 주피터 노트북 설정 변경
-    - 윈도우 환경
-    - 맥(macOS) 환경
-
-## Google Colaboratory 환경
+- Google Colaboratory 환경
     - 한글 폰트 설치하기
 
-## 참고
+- 참고
 
 
 ```python
