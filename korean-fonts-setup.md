@@ -14,9 +14,10 @@ Seoul National University
 
 <div align='right'><font size='-1'>[credit: 진솔, 김도훈]</font></div>
 
+= = =
+- - - 
 <h3>Table of Contents<span class="tocSkip"></span></h3>
 
-- - -
 - **주피터 노트북 환경**
 
     - **matplotlib.rcParams[] 사용**
