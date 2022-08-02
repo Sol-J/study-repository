@@ -22,7 +22,7 @@ import csv
 import math
 from tqdm import tqdm
 
-df = pd.read_excel('./solbook.xlsx')
+df = pd.read_excel('/home/ec2-user/solbook.xlsx')
 df
 
 options = webdriver.ChromeOptions() 
