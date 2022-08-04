@@ -58,7 +58,7 @@ def get_infringe_naver_blog(info):
     
         query = f'{book_name} %26 첨부파일 %26 파일 다운로드' #f'{publisher} &26 {book_name} %26 첨부파일 %26 파일 다운로드'
         driver.get(f'https://section.blog.naver.com/Search/Post.naver?pageNo=1&rangeType=ALL&orderBy=recentdate&keyword={query}')
-        driver.implicitly_wait(3)
+        driver.implicitly_wait(2)
 
         search_num = driver.find_element(By.CLASS_NAME, 'search_number').text
         pages = math.ceil(int(search_num[:-1].replace(',', ''))/7)
@@ -67,7 +67,7 @@ def get_infringe_naver_blog(info):
         for page in range(1, pages+1):
             url = f'https://section.blog.naver.com/Search/Post.naver?pageNo={page}&rangeType=ALL&orderBy=recentdate&keyword={query}'
             driver.get(url)
-            driver.implicitly_wait(3)
+            driver.implicitly_wait(2)
             try:
                 for p in range(1,8):
                     post = driver.find_element(By.CSS_SELECTOR, f'#content > section > div.area_list_search > div:nth-child({p}) > div > div.info_post > div.desc > a.text')   
@@ -107,7 +107,7 @@ def get_infringe_naver_cafe(info):
         publisher, book_name = info[i].split('|')[0], info[i].split('|')[1]
         query = f'{book_name} %26 첨부파일 %26 파일 다운로드' #f'{publisher} &26 {book_name} %26 첨부파일 %26 파일 다운로드'
         driver.get(f'https://section.cafe.naver.com/ca-fe/home/search/articles?q={query}&od=1')
-        time.sleep(1.5)
+        driver.implicitly_wait(2)
 
         search_num = driver.find_element(By.CLASS_NAME, 'total_count').text
         pages = math.ceil(int(search_num[:-1].replace(',', ''))/12)
@@ -116,7 +116,7 @@ def get_infringe_naver_cafe(info):
         for page in range(1, pages+1):
             url = f'https://section.cafe.naver.com/ca-fe/home/search/articles?q={query}&p={page}&od=1'
             driver.get(url)
-            driver.implicitly_wait(3)
+            driver.implicitly_wait(2)
             try:
                 for p in range(1,13):
                     post = driver.find_element(By.CSS_SELECTOR, f'#mainContainer > div > div.SectionSearchContent > div.section_search_content > div > div.article_list_area > ul > li:nth-child({p}) > div > div > div > a')   
