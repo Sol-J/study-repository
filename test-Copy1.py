@@ -1,3 +1,37 @@
+def get_book_list(path):
+    df = pd.read_excel(path)
+    info = []
+    for idx in range(len(df)):
+        info.append(str(df['출판사 명'][idx]) + '|' + str(df['교재명'][idx]))
+    return info
+
+def is_infringe(publisher, book_name, content): #침해하지 않은 사례도 걸리는 문제..
+    infringe = 0
+    if publisher in content:
+        infringe += 1
+
+    cnt = 0 
+    book_keywords = book_name.replace('(', ' ').replace(')', ' ').replace('  ', ' ').split(' ')
+    for noun in book_keywords:
+        if noun in content.split(' '):
+            cnt += 1
+    if cnt >= (len(book_keywords))*0.3:
+        infringe += 1
+        
+    return infringe
+
+def open_browser():
+    options = webdriver.ChromeOptions() 
+    options.add_argument('headless')
+    options.add_argument("disable-gpu") 
+    options.add_argument("disable-infobars")
+    options.add_argument("--disable-extensions")
+    prefs = {'profile.default_content_setting_values': {'cookies' : 2, 'images': 2, 'plugins' : 2, 'popups': 2, 'geolocation': 2, 'notifications' : 2, 'auto_select_certificate': 2, 'fullscreen' : 2, 'mouselock' : 2, 'mixed_script': 2, 'media_stream' : 2, 'media_stream_mic' : 2, 'media_stream_camera': 2, 'protocol_handlers' : 2, 'ppapi_broker' : 2, 'automatic_downloads': 2, 'midi_sysex' : 2, 'push_messaging' : 2, 'ssl_cert_decisions': 2, 'metro_switch_to_desktop' : 2, 'protected_media_identifier': 2, 'app_banner': 2, 'site_engagement' : 2, 'durable_storage' : 2}}   
+    options.add_experimental_option('prefs', prefs)
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko")
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options) 
+    return driver
+
 def get_infringe_naver_blog(info):
     publishers, book_names, inf_ids, inf_urls, inf_dates = [], [], [], [], []
     driver = open_browser()
