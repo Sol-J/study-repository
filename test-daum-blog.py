@@ -119,6 +119,6 @@ def get_infringe_tistory_blog(info):
 
 if __name__ == '__main__':
     info_list = get_book_list('/home/ec2-user/solbook.xlsx')
-    publishers, book_names, inf_ids, inf_urls, inf_dates = get_infringe_daum_cafe(info_list)
+    publishers, book_names, inf_ids, inf_urls, inf_dates = get_infringe_tistory_blog(info_list)
     print(publishers, book_names, inf_ids, inf_urls, inf_dates)
 
