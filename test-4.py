@@ -90,15 +90,11 @@ def get_infringe_naver_blog(info):
             time.sleep(0.5)
             page_source = driver.page_source
             bs = BeautifulSoup(page_source, 'lxml')
-
-            try:
-                file = bs.find('div', {'class': 'se-module.se-module-file'})
-            except:
-                pass
-            else:
+            
+            if bs.find('div', {'class': 'se-module se-module-file'}) is not None:
                 content = bs.find('div', {'id':'postListBody'}).text
                 infringe = is_infringe(publisher, book_name, content)
-                
+
                 if infringe:
                     publishers.append(publisher)
                     book_names.append(book_name)
@@ -109,8 +105,8 @@ def get_infringe_naver_blog(info):
                         date = datetime.strptime(date_tag, '%Y. %m. %d. %H:%M').strftime('%Y-%m-%d')
                     except:
                         date = datetime.now().strftime('%Y-%m-%d')
-                    inf_dates.append(date) 
-                    
+                    inf_dates.append(date)
+
     return publishers, book_names, inf_ids, inf_urls, inf_dates
 
 if __name__ == '__main__':
