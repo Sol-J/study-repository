@@ -58,7 +58,7 @@ def get_infringe_naver_blog(info):
     publishers, book_names, inf_ids, inf_urls, inf_dates = [], [], [], [], []
     driver = open_browser()
     
-    for i in tqdm(range(len(info[:30]))):
+    for i in tqdm(range(len(info[:100]))):
         publisher, book_name = info[i].split('|')[0], info[i].split('|')[1]
     
         query = f'{book_name} %26 첨부파일 %26 파일 다운로드' #f'{publisher} &26 {book_name} %26 첨부파일 %26 파일 다운로드'
