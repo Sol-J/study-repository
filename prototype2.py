@@ -66,17 +66,6 @@ def is_infringe(publisher, book_name, content):
 def get_infringe_naver_blog(info):
     results = []
     driver = open_browser()
-    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-
-    json_file_name = 'probable-prism-303901-79ac1936ac64.json'
-
-    credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
-    gc = gspread.authorize(credentials)
-
-    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
-
-    doc = gc.open_by_url(spreadsheet_url)
-    worksheet = doc.worksheet('Naver_blog')
     
     for i in tqdm(range(len(info))):
         publisher, book_name = info[i].split('|')[0], info[i].split('|')[1]
@@ -116,6 +105,17 @@ def get_infringe_naver_blog(info):
                 infringe = is_infringe(publisher, book_name, content)
 
                 if infringe:
+                    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+
+                    json_file_name = 'probable-prism-303901-79ac1936ac64.json'
+
+                    credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
+                    gc = gspread.authorize(credentials)
+
+                    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
+
+                    doc = gc.open_by_url(spreadsheet_url)
+                    worksheet = doc.worksheet('Naver_blog')
                     date_tag = bs.find('span', {'class': 'se_publishDate pcol2'}).text
                     try:
                         date = datetime.strptime(date_tag, '%Y. %m. %d. %H:%M').strftime('%Y-%m-%d')
@@ -130,17 +130,6 @@ def get_infringe_naver_blog(info):
 def get_infringe_naver_cafe(info):
     results = []
     driver = open_browser()
-    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-
-    json_file_name = 'probable-prism-303901-79ac1936ac64.json'
-
-    credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
-    gc = gspread.authorize(credentials)
-
-    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
-
-    doc = gc.open_by_url(spreadsheet_url)
-    worksheet = doc.worksheet('Naver_cafe')
     
     for i in tqdm(range(len(info))):
         publisher, book_name = info[i].split('|')[0], info[i].split('|')[1]
@@ -178,6 +167,18 @@ def get_infringe_naver_cafe(info):
                 infringe = is_infringe(publisher, book_name, content)
 
                 if infringe:
+                    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+
+                    json_file_name = 'probable-prism-303901-79ac1936ac64.json'
+
+                    credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
+                    gc = gspread.authorize(credentials)
+
+                    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
+
+                    doc = gc.open_by_url(spreadsheet_url)
+                    worksheet = doc.worksheet('Naver_cafe')
+                    
                     date_tag = bs.find('span', {'class':'date'}).text
                     try:
                         date = datetime.strptime(date_tag, '%Y. %m. %d. %H:%M').strftime('%Y-%m-%d')
@@ -194,22 +195,22 @@ def tistory_link_loc(link):
                       'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36')}
     response = requests.get(link, headers = hdr) 
     bs = BeautifulSoup(response.text, 'lxml')
-    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-
-    json_file_name = 'probable-prism-303901-79ac1936ac64.json'
-
-    credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
-    gc = gspread.authorize(credentials)
-
-    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
-
-    doc = gc.open_by_url(spreadsheet_url)
-    worksheet = doc.worksheet('Daum_cafe')
     
     if bs.find('figure', {'class':'fileblock'}) is not None:
         content = bs.find('div', {'class':'contents_style'}).text
         infringe = is_infringe(publisher, book_name, content)
         if infringe:
+            scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+
+            json_file_name = 'probable-prism-303901-79ac1936ac64.json'
+
+            credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
+            gc = gspread.authorize(credentials)
+
+            spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
+
+            doc = gc.open_by_url(spreadsheet_url)
+            worksheet = doc.worksheet('Tistory')
             try:
                 date_tag = bs.select_one('span.date').text
                 date = datetime.strptime(date_tag, '%Y. %m. %d. %H:%M').strftime('%Y-%m-%d')
@@ -262,22 +263,23 @@ def daum_cafe_link_loc(link):
     driver.switch_to.frame('down')
     page_source = driver.page_source
     bs = BeautifulSoup(page_source, 'lxml')
-    scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
-
-    json_file_name = 'probable-prism-303901-79ac1936ac64.json'
-
-    credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
-    gc = gspread.authorize(credentials)
-
-    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
-
-    doc = gc.open_by_url(spreadsheet_url)
-    worksheet = doc.worksheet('Tistory')
     
     if bs.find('div', {'class':'AFArea'}) is not None:
         content = bs.find('div', {'class':'bbs_contents'}).text
         infringe = is_infringe(publisher, book_name, content)
         if infringe:
+            scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+
+            json_file_name = 'probable-prism-303901-79ac1936ac64.json'
+
+            credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
+            gc = gspread.authorize(credentials)
+
+            spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
+
+            doc = gc.open_by_url(spreadsheet_url)
+            worksheet = doc.worksheet('Daum_cafe')
+            
             try:
                 date_tag = bs.find_all('span', {'class': 'txt_item'})[2].text
                 date = datetime.strptime(date_tag, '%y.%m.%d %H:%M').strftime('%Y-%m-%d')
