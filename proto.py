@@ -23,6 +23,9 @@ import csv
 import math
 from tqdm.auto import tqdm
 
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
 def get_book_list(path):
     df = pd.read_excel(path)
     info = []
