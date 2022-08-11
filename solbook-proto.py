@@ -67,7 +67,10 @@ def get_infringe_naver_blog(info):
     for i in tqdm(range(len(info))):
         publisher, book_name = info[i].split('|')[0], info[i].split('|')[1]
     
-        query = f'{book_name} %26 첨부파일 %26 파일 다운로드' #f'{publisher} &26 {book_name} %26 첨부파일 %26 파일 다운로드'
+        if '&' in book_name:
+            query = f"{book_name.replace('&', '%26')} %26 첨부파일 %26 파일 다운로드"
+        else: 
+            query = f'{book_name} %26 첨부파일 %26 파일 다운로드' #f'{publisher} &26 {book_name} %26 첨부파일 %26 파일 다운로드'
         driver.get(f'https://section.blog.naver.com/Search/Post.naver?pageNo=1&rangeType=ALL&orderBy=recentdate&keyword={query}')
         time.sleep(0.5)
         page_source = driver.page_source
@@ -118,7 +121,10 @@ def get_infringe_naver_cafe(info):
     driver = open_browser()
     for i in tqdm(range(len(info))):
         publisher, book_name = info[i].split('|')[0], info[i].split('|')[1]
-        query = f'{book_name} %26 첨부파일 %26 파일 다운로드' #f'{publisher} &26 {book_name} %26 첨부파일 %26 파일 다운로드'
+        if '&' in book_name:
+            query = f"{book_name.replace('&', '%26')} %26 첨부파일 %26 파일 다운로드"
+        else: 
+            query = f'{book_name} %26 첨부파일 %26 파일 다운로드' #f'{publisher} &26 {book_name} %26 첨부파일 %26 파일 다운로드'
         driver.get(f'https://section.cafe.naver.com/ca-fe/home/search/articles?q={query}&od=1')
         time.sleep(0.5)
         page_source = driver.page_source
@@ -194,7 +200,10 @@ def get_infringe_tistory_blog(info):
     for i in tqdm(range(len(info))):
         publisher, book_name = info[i].split('|')[0], info[i].split('|')[1]
     
-        query = f'{book_name} %26 pdf'
+        if '&' in book_name:
+            query = f"{book_name.replace('&', '%26')} %26 pdf"
+        else: 
+            query = f'{book_name} %26 pdf' 
         url = f'https://search.daum.net/search?w=blog&f=section&SA=tistory&lpp=10&nil_src=tistory&q={query}&sort=timely'
         hdr = {'user-agent': ('Mozilla/5.0 (Windows NT 10.0; Win64; x64)' 
                       'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36')}
@@ -253,7 +262,11 @@ def get_infringe_daum_cafe(info):
     for i in tqdm(range(len(info))):
         publisher, book_name = info[i].split('|')[0], info[i].split('|')[1]
     
-        query = f'{book_name} %26 pdf'
+        if '&' in book_name:
+            query = f"{book_name.replace('&', '%26')} %26 pdf"
+        else: 
+            query = f'{book_name} %26 pdf' 
+            
         url = f'https://top.cafe.daum.net/_c21_/search?search_opt=board&SearchType=tab&sort_type=recency&q={query}&p=1'
         hdr = {'user-agent': ('Mozilla/5.0 (Windows NT 10.0; Win64; x64)' 
                       'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36')}
