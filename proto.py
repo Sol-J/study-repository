@@ -61,8 +61,19 @@ def is_infringe(publisher, book_name, content):
 
 # (1) 네이버 블로그
 def get_infringe_naver_blog(info):
-    publishers, book_names, inf_ids, inf_urls, inf_dates = [], [], [], [], []
+    results = []
     driver = open_browser()
+    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+
+    json_file_name = 'probable-prism-303901-79ac1936ac64.json'
+
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
+    gc = gspread.authorize(credentials)
+
+    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
+
+    doc = gc.open_by_url(spreadsheet_url)
+    worksheet = doc.worksheet('Naver_blog')
     
     for i in tqdm(range(len(info))):
         publisher, book_name = info[i].split('|')[0], info[i].split('|')[1]
@@ -102,23 +113,32 @@ def get_infringe_naver_blog(info):
                 infringe = is_infringe(publisher, book_name, content)
 
                 if infringe:
-                    publishers.append(publisher)
-                    book_names.append(book_name)
-                    inf_ids.append(link.split('/')[3] + '@naver.com')
-                    inf_urls.append(link)
                     date_tag = bs.find('span', {'class': 'se_publishDate pcol2'}).text
                     try:
                         date = datetime.strptime(date_tag, '%Y. %m. %d. %H:%M').strftime('%Y-%m-%d')
                     except:
                         date = datetime.now().strftime('%Y-%m-%d')
-                    inf_dates.append(date)
+                    results.append([publisher, book_name, link.split('/')[3] + '@naver.com', link, date])
+                    worksheet.insert_row([publisher, book_name, link.split('/')[3] + '@naver.com', link, date], 2)
 
-    return publishers, book_names, inf_ids, inf_urls, inf_dates
+    return results
 
 # (2) 네이버 카페
 def get_infringe_naver_cafe(info):
-    publishers, book_names, inf_urls, inf_dates = [], [], [], []
+    results = []
     driver = open_browser()
+    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+
+    json_file_name = 'probable-prism-303901-79ac1936ac64.json'
+
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
+    gc = gspread.authorize(credentials)
+
+    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
+
+    doc = gc.open_by_url(spreadsheet_url)
+    worksheet = doc.worksheet('Naver_cafe')
+    
     for i in tqdm(range(len(info))):
         publisher, book_name = info[i].split('|')[0], info[i].split('|')[1]
         if '&' in book_name:
@@ -155,19 +175,15 @@ def get_infringe_naver_cafe(info):
                 infringe = is_infringe(publisher, book_name, content)
 
                 if infringe:
-                    publishers.append(publisher)
-                    book_names.append(book_name)
-                    inf_urls.append(link)
                     date_tag = bs.find('span', {'class':'date'}).text
                     try:
                         date = datetime.strptime(date_tag, '%Y. %m. %d. %H:%M').strftime('%Y-%m-%d')
                     except:
                         date = datetime.now().strftime('%Y-%m-%d')
-                    inf_dates.append(date) 
-                    
-        print(publishers, book_names, inf_urls, inf_dates)
+                    results.append([publisher, book_name, link, date])
+                    worksheet.insert_row([publisher, book_name, link, date], 2)
 
-    return publishers, book_names, inf_urls, inf_dates
+    return results
 
 # (3) 다음 블로그 (티스토리)
 def tistory_link_loc(link):
@@ -175,27 +191,34 @@ def tistory_link_loc(link):
                       'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36')}
     response = requests.get(link, headers = hdr) 
     bs = BeautifulSoup(response.text, 'lxml')
+    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+
+    json_file_name = 'probable-prism-303901-79ac1936ac64.json'
+
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
+    gc = gspread.authorize(credentials)
+
+    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
+
+    doc = gc.open_by_url(spreadsheet_url)
+    worksheet = doc.worksheet('Daum_cafe')
     
     if bs.find('figure', {'class':'fileblock'}) is not None:
         content = bs.find('div', {'class':'contents_style'}).text
         infringe = is_infringe(publisher, book_name, content)
         if infringe:
-            publishers.append(publisher)
-            book_names.append(book_name)
-            inf_ids.append(link.split('/')[2].split('.')[0])
-            inf_urls.append(link)
             try:
                 date_tag = bs.select_one('span.date').text
                 date = datetime.strptime(date_tag, '%Y. %m. %d. %H:%M').strftime('%Y-%m-%d')
             except:
                 date = datetime.now().strftime('%Y-%m-%d')
-            inf_dates.append(date) 
+            results.append([publisher, book_name, link.split('/')[2].split('.')[0], link, date])
+            worksheet.insert_row([publisher, book_name, link.split('/')[2].split('.')[0], link, date], 2)
             
 def get_infringe_tistory_blog(info):
     
-    global publishers, book_names, inf_ids, inf_urls, inf_dates 
-    publishers, book_names, inf_ids, inf_urls, inf_dates = [], [], [], [], []
-    global publisher, book_name
+    global results, publisher, book_name
+    results = []
     
     for i in tqdm(range(len(info))):
         publisher, book_name = info[i].split('|')[0], info[i].split('|')[1]
@@ -228,7 +251,7 @@ def get_infringe_tistory_blog(info):
         for link in links:
             tistory_link_loc(link)
 
-    return publishers, book_names, inf_ids, inf_urls, inf_dates
+    return results
 
 # (4) 다음 카페
 def daum_cafe_link_loc(link):
@@ -236,26 +259,34 @@ def daum_cafe_link_loc(link):
     driver.switch_to.frame('down')
     page_source = driver.page_source
     bs = BeautifulSoup(page_source, 'lxml')
+    scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
+
+    json_file_name = 'probable-prism-303901-79ac1936ac64.json'
+
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(json_file_name, scope)
+    gc = gspread.authorize(credentials)
+
+    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sr4CBn3ON9F5RXymHZzmwW7LpRcsv969Qwx4QjsW1Lo/edit?usp=sharing'
+
+    doc = gc.open_by_url(spreadsheet_url)
+    worksheet = doc.worksheet('Tistory')
     
     if bs.find('div', {'class':'AFArea'}) is not None:
         content = bs.find('div', {'class':'bbs_contents'}).text
         infringe = is_infringe(publisher, book_name, content)
         if infringe:
-            publishers.append(publisher)
-            book_names.append(book_name)
-            inf_urls.append(link)
             try:
                 date_tag = bs.find_all('span', {'class': 'txt_item'})[2].text
                 date = datetime.strptime(date_tag, '%y.%m.%d %H:%M').strftime('%Y-%m-%d')
             except:
                 date = datetime.now().strftime('%Y-%m-%d')
-            inf_dates.append(date) 
+            results.append([publisher, book_name, link, date])
+            worksheet.insert_row([publisher, book_name, link, date], 2)
             
 def get_infringe_daum_cafe(info):
     
-    global publishers, book_names, inf_urls, inf_dates 
-    publishers, book_names, inf_urls, inf_dates = [], [], [], []
-    global publisher, book_name
+    global results, publisher, book_name
+    results = []
     global driver
     driver = open_browser()
     
@@ -290,4 +321,4 @@ def get_infringe_daum_cafe(info):
         for link in links:
             daum_cafe_link_loc(link)
 
-    return publishers, book_names, inf_urls, inf_dates
+    return results
