@@ -181,7 +181,7 @@ def get_infringe_naver_cafe(info):
                     
                     date_tag = bs.find('span', {'class':'date'}).text
                     try:
-                        date = datetime.strptime(date_tag, '%Y. %m. %d. %H:%M').strftime('%Y-%m-%d')
+                        date = datetime.strptime(date_tag, '%Y.%m.%d. %H:%M').strftime('%Y-%m-%d')
                     except:
                         date = datetime.now().strftime('%Y-%m-%d')
                     results.append([publisher, book_name, link, date])
