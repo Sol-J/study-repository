@@ -1,2 +1,0 @@
-# Scaled dot product Attention
-
